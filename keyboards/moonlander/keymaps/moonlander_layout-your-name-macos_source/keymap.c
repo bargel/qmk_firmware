@@ -253,6 +253,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     case ST_MACRO_0:
     if (record->event.pressed) {
       SEND_STRING(SS_LCTL(SS_TAP(X_SPACE)));
+      layer_clear();
       layer_invert(1);
     }
     break;
@@ -264,22 +265,22 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     break;
     case ST_MACRO_2:
     if (record->event.pressed) {
-      SEND_STRING(SS_LCTL(SS_TAP(X_A)) SS_DELAY(100) SS_TAP(X_COMMA));
+      SEND_STRING(SS_LCTL(SS_TAP(X_T)) SS_DELAY(100) SS_TAP(X_COMMA));
     }
     break;
     case ST_MACRO_3:
     if (record->event.pressed) {
-      SEND_STRING(SS_LCTL(SS_TAP(X_A)) SS_DELAY(100) SS_LSFT(SS_TAP(X_4)));
+      SEND_STRING(SS_LCTL(SS_TAP(X_T)) SS_DELAY(100) SS_LSFT(SS_TAP(X_4)));
     }
     break;
     case ST_MACRO_4:
     if (record->event.pressed) {
-      SEND_STRING(SS_LCTL(SS_TAP(X_A)) SS_DELAY(100) SS_TAP(X_MINUS));
+      SEND_STRING(SS_LCTL(SS_TAP(X_T)) SS_DELAY(100) SS_TAP(X_MINUS));
     }
     break;
     case ST_MACRO_5:
     if (record->event.pressed) {
-      SEND_STRING(SS_LCTL(SS_TAP(X_A)) SS_DELAY(100) SS_TAP(X_BSLS));
+      SEND_STRING(SS_LCTL(SS_TAP(X_T)) SS_DELAY(100) SS_TAP(X_BSLS));
     }
     break;
     case MAC_LOCK:
